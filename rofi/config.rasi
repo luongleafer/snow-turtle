@@ -1,0 +1,7 @@
+configuration {
+  modes: "window,run,drun,open,script,firefox_launcher,obsidian";
+}
+
+@theme "snowturtle"
+ 
+/* Insert theme modifications after this */

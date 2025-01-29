@@ -1,0 +1,127 @@
+* {
+
+    black:   #3c3836;
+    red:     #cc241d;
+    green:   #98971a;
+    yellow:  #d79921;
+    blue:    #458588;
+    magenta: #b16286;
+    cyan:    #689d6a;
+    white:   #fbf1c7;
+}
+
+window {
+	background-color: @white;
+	border: 1px;
+    border-radius: 5px;
+	border-color: @green;
+	children: [ mainbox ] ;
+	padding: 3px;
+	font: "Roboto Mono Nerd Font 12";
+}
+
+mainbox {
+	background-color: @white;
+	text-color: @black;
+	border-color: @black;
+	children: [ inputbar, listview];
+	spacing: 10px;
+}
+
+inputbar {
+	background-color: @white;
+	border-color: @white;
+	text-color: inherit;
+	children: [prompt, entry];
+	border: 1px;
+	border-radius: 2px;
+}
+
+separator {
+	enabled: true;
+	background-color: inherit;
+	text-color: inherit;
+	content: "";
+}
+
+
+prompt {
+	background-color: inherit;
+	text-color: inherit;
+	margin: 0px 5px;
+}
+
+entry {
+    	placeholder: "Type something here...";
+	placeholder-color: @black;
+	background-color: inherit;
+	text-color: inherit;
+}
+
+listview {
+	background-color: inherit;
+	text-color: inherit;
+	children: [element];
+	orientation: vertical;
+	columns: 1;
+	lines: 10;
+	fixed-columns: false;
+	fixed-height: true;
+}
+
+
+element {
+	background-color: inherit;
+	text-color: inherit;
+	orientation: horizontal;
+	children: [ element-icon, element-text ];
+	spacing: 5px;
+	border: 1px;
+	border-color: @white;
+	border-radius: 1px;
+}
+
+element normal{
+	text-color: @black;
+}
+
+element selected{
+	background-color: @green;
+	text-color: @white;
+}
+
+element normal.active{
+	text-color: @green;
+}
+
+
+
+element-text {
+	vertical-align: 0.5;
+	background-color: inherit;
+	text-color: inherit;
+	highlight: bold underline;
+}
+
+
+
+element-icon {
+	background-color :inherit;
+	size: 1em;
+}
+
+mode-switcher {
+	background-color: inherit;
+	text-color: inherit;
+}
+
+button {
+	background-color: @white;
+	text-color: @black;
+}
+
+
+button selected{
+	background-color: @green;
+	text-color: @white;
+}
