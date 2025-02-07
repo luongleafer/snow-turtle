@@ -1,3 +1,55 @@
+[window]
+startup_mode = "Maximized"
+
+[general]
+working_directory = "D:\\" #Windows
+
 [font]
-normal = { family = "Roboto Nerd", style = "Regular" }
+normal = { family = "RobotoMono Nerd Font", style = "Regular" }
 size = 20
+
+[colors]
+  indexed_colors  = [
+    {index = 21, color = '#1c1b1b'},
+    {index = 166, color = '#d65d0e'},
+    {index = 235, color = '#282828'},
+    {index = 208, color = '#fe8019'},
+    {index = 237, color = '#3c3836'},
+    {index = 239, color = '#504945'},
+    {index = 241, color = '#665c54'},
+    {index = 243, color = '#7c6f64'},
+    {index = 245, color = '#928374'},
+    {index = 229, color = '#fbf1c7'},
+    {index = 223, color = '#ebdbb2'},
+    {index = 250, color = '#d5c4a1'},
+    {index = 248, color = '#bdae93'},
+    {index = 246, color = '#a89984'},
+    {index = 228, color = '#f2e5bc'}
+
+  ]
+
+
+[colors.primary]
+background = '#fbf1c7'
+foreground = '#3c3836'
+
+[colors.normal]
+black =   '#fbf1c7'
+red =     '#cc241d'
+green =   '#98971a'
+yellow =  '#d79921'
+blue =    '#458588'
+magenta = '#b16286'
+cyan =    '#689d6a'
+white = '#3c3836'
+
+[colors.bright]
+    black =   '#928374'
+    red =     '#9d0006'
+    green =   '#79740e'
+    yellow =  '#b57614'
+    blue =    '#076678'
+    magenta = '#8f3f71'
+    cyan =    '#427b58'
+    white =   '#3c3836'
+
