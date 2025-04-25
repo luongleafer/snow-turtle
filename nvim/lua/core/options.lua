@@ -7,5 +7,6 @@ vim.cmd.set("number")
 vim.cmd.set("expandtab")
 vim.cmd.set("tabstop=4")
 vim.cmd.set("shiftwidth=4")
+vim.cmd.set("notermguicolors")
 vim.o.laststatus = 3
---vim.o.statusline = "%y %m %r %= %l %c %S"
+vim.cmd.set("wfh")

@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-find_path="/home/luong/ObsidianVaults/"
+find_path="/home/luong/Documents/ObsidianVaults/"
 
 if [ -z $1 ]; then
     all_dir=$(ls -d ${find_path}*/)

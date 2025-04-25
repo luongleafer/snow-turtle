@@ -6,17 +6,19 @@ add_newline = true
 palette = 'gruvbox'
 
 format = """
-$nix_shell\
 $status\
-[](fg:yellow)\
+$jobs\
 $directory\
-$cmd_duration\
 $git_branch\
 $c\
 $python\
 $rust\
-$java
+$java\
+$cmd_duration
 $character
+"""
+
+right_format = """
 """
 
 
@@ -28,7 +30,10 @@ yellow=  '#d79921'
 blue=    '#458588'
 magenta= '#b16286'
 cyan=    '#689d6a'
-white=  '#a89984'
+white=   '#a89984'
+gray=    '#928374'
+cblue=   '#283593'
+rustorange= '#d34516'
 
 # Inserts a blank line between shell prompts
 
@@ -46,9 +51,10 @@ disabled = true
 
 [status]
 disabled = false
-format = '[ $symbol$status]($style)'
+format = '[ $symbol$status ]($style)'
 style = 'fg:yellow'
 success_symbol = '󰄬 '
+symbol = ' '
 
 [directory]
 style = 'fg:blue'
@@ -68,3 +74,25 @@ format = '[$symbol$state\($name\) ]($style)'
 style = 'fg:red'
 symbol = ' '
 
+# ~/.config/starship.toml
+
+[java]
+symbol = '󰬷 '
+
+# ~/.config/starship.toml
+[jobs]
+symbol = '+ '
+style = 'fg:gray'
+number_threshold = 2
+symbol_threshold = 1
+format = '[ $symbol$number ]($style)'
+
+[c]
+style = 'fg:cblue'
+format = '[ $symbol $name $version ]($style)'
+symbol = ''
+
+[rust]
+style = 'fg:rustorange'
+format = '[ $symbol $version ]($style)'
+symbol = '󱘗'

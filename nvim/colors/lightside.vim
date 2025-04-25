@@ -48,8 +48,8 @@ hi SpellBad ctermbg=224 ctermfg=0
 hi SpellCap ctermbg=81 ctermfg=0
 hi SpellRare ctermbg=225 ctermfg=0
 hi SpellLocal ctermbg=14 ctermfg=0
-hi Pmenu ctermfg=15 ctermbg=0
-hi PmenuSel ctermfg=0 ctermbg=2
+hi Pmenu ctermfg=15 ctermbg=0 cterm=None
+hi PmenuSel ctermfg=0 ctermbg=2 cterm=None
 hi! link PmenuKind Pmenu
 hi! link PmenuKindSel PmenuSel
 hi! link PmenuExtra Pmenu
@@ -80,6 +80,7 @@ hi Underlined term=underline cterm=underline ctermfg=5
 hi Ignore ctermfg=15
 hi Error cterm=standout ctermfg=1 ctermbg=0
 hi Todo term=standout ctermfg=0 ctermbg=11
+hi Special ctermfg=10
 hi! link String Constant
 hi! link Character Constant
 hi! link Number Constant
@@ -132,6 +133,7 @@ hi! link pythonExceptions Structure
 hi! clear pythonSync 
 hi WinSeparator ctermbg=0 ctermfg=10
 hi NormalFloat ctermbg=0 ctermfg=7
+hi FloatBorder ctermbg=0 ctermfg=2
 " Barbar
 
 " Current tab
@@ -155,3 +157,6 @@ hi DiagnosticError ctermfg=1
 hi DiagnosticWarn ctermfg=166
 hi DiagnosticUnderlineError cterm=underline ctermfg=1
 hi DiagnosticUnderlineWarn cterm=underline ctermfg=166
+
+" Treesitter
+hi! link @type.builtin Type

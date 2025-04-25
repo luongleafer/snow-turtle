@@ -17,7 +17,7 @@ window {
 	border-color: @green;
 	children: [ mainbox ] ;
 	padding: 3px;
-	font: "Roboto Mono Nerd Font 12";
+	font: "Roboto Mono Nerd Font 15";
 }
 
 mainbox {
@@ -63,9 +63,8 @@ listview {
 	text-color: inherit;
 	children: [element];
 	orientation: vertical;
-	columns: 1;
 	lines: 10;
-	fixed-columns: false;
+	fixed-columns: true;
 	fixed-height: true;
 }
 
@@ -78,7 +77,8 @@ element {
 	spacing: 5px;
 	border: 1px;
 	border-color: @white;
-	border-radius: 1px;
+	border-radius: 5px;
+    padding: 5px;
 }
 
 element normal{

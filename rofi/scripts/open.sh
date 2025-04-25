@@ -13,5 +13,5 @@ if [ -z $1 ]; then
         fi
     done
 else
-    rofi -show $1 >> /dev/null & disown
+    rofi -show $1 >> /dev/null & disown 
 fi

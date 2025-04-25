@@ -1,4 +1,10 @@
 require("config.global_values")
+
+local new_term = function()
+    vim.cmd("below terminal")
+    vim.cmd("resize 8")
+end
+
 local nvim_tree_api = require("nvim-tree.api")
 local wk = require("which-key")
 wk.add({
@@ -32,5 +38,15 @@ wk.add({
     {"<leader>rp",nvim_tree_api.tree.change_root_to_parent,desc="Change to parent directory"},
     {"<leader>ra",nvim_tree_api.fs.create,desc="Create new file"},
     {"<leader>ro",nvim_tree_api.node.open.edit,desc="Open and edit the file"},
+    {"<leader>rr",nvim_tree_api.fs.rename, desc = "Rename the file"},
+
+    {"<leader>b",group = "Buffers"},
+    {"<leader>bf", "<cmd>bnext<CR>", desc = "Next buffer"},
+    {"<leader>bb", "<cmd>bprevious<CR>", desc = "Previous buffer"},
+    {"<leader>bd", "<cmd>bd!<CR>", desc = "Delete buffer"},
+
+    {"<leader>e", group = "tErminal"},
+    {"<leader>en", new_term, desc = "New terminal"},
+
 })
 

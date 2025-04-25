@@ -1,5 +1,5 @@
 configuration {
-  modes: "window,run,drun,open,script,firefox_launcher,obsidian";
+  modes: "window,run,drun,open,system,obsidian,gfx,waterfox";
 }
 
 @theme "snowturtle"

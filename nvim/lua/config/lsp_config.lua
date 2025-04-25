@@ -1,17 +1,22 @@
 require("config.global_values")
-
-require("mason").setup()
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 require("mason-lspconfig").setup()
-require("mason-lspconfig").setup_handlers {
+--require("mason-lspconfig").setup_handlers {
     -- The first entry (without a key) will be the default handler
     -- and will be called for each installed server that doesn't have
     -- a dedicated handler.
-    function (server_name) -- default handler (optional)
-        require("lspconfig")[server_name].setup {}
-    end,
-}
+--    function (server_name) -- default handler (optional)
+
+--        require("lspconfig")[server_name].setup {
+--            capabilities = capabilities
+--        }
+--    end,
+--}
 
 local lspconfig = require("lspconfig")
+lspconfig.clangd.setup({
+    capabilities = capabilities
+})
 
 vim.api.nvim_create_autocmd("LspAttach", {
 	group = vim.api.nvim_create_augroup("UserLspConfig", {}),
@@ -48,9 +53,10 @@ vim.api.nvim_create_autocmd("LspAttach", {
 vim.diagnostic.config(
     {
         float = {border = Border},
-        virtual_text = {
-		    prefix = "󰁔", -- Could be '●', '▎', 'x'
-	    },
+        virtual_lines = true
+        --virtual_text = {
+		--    prefix = "󰁔", -- Could be '●', '▎', 'x'
+	    --},
     }
 )
 
