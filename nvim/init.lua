@@ -1,11 +1,2 @@
-require("core.mappings")
-require("core.options")
-require("core.autocmds")
+-- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
-require("config.mason")
-require("config.lsp_config")
-require("config.dap")
-require("config.dap_ui")
-require("config.completion")
-require("config.which_key")
-require("config.treesitter")

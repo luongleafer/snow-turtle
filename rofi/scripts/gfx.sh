@@ -9,5 +9,4 @@ if [ -z $1 ]; then
     done
 else
     supergfxctl -m $1 >> /dev/null
-    i3-msg exit
 fi
